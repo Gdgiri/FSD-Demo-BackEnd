@@ -1,8 +1,14 @@
 import express from "express";
-import { registerUser } from "../Controllers/authControllers.js";
+import {
+  google,
+  loginUser,
+  registerUser,
+} from "../Controllers/authControllers.js";
 
 const router = express.Router();
 
 router.post("/register-user", registerUser);
+router.post("/login-user", loginUser);
+router.post("/google", google);
 
 export default router;
